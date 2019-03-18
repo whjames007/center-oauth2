@@ -5,6 +5,8 @@ public class Oauth2Constants {
 	 * JSON Web
 	 * Token（JWT）是一种开放的标准（RFC7519）,JWT定义了一种紧凑且自包含的标准，该标准旨在将各个主体的信息、包装为JSON对象。
 	 * 基于keytool生成私钥和公钥
+	 * keytool -genkeypair -alias changinye-jwt -validity 3650 -keyalg RSA -dname "" -keypass Changinye#027 -keystore changinye-jwt.jks -storepass Changinye#027
+	 * keytool -list -rfc --keystore changinye-jwt.jks | openssl x509 -inform pem -pubkey
 	 */
 	// jwt别名
 	public static final String JWT_ALIAS = "gewei-jwt";
@@ -13,7 +15,7 @@ public class Oauth2Constants {
 	public static final String JWT_FILENAME = "changinye-jwt.jks";
 	// jwt密码
 	public static final String JWT_PASSWORD = "Gewei#027";
-	public static final String JWT_PASSWORD2 = "CHANginye#027";
+	public static final String JWT_PASSWORD2 = "Changinye#027";
 
 	// oauth2的客户端ID（全局统一）
 	public static final String CLIENT_ID = "clientIdForGewei";
