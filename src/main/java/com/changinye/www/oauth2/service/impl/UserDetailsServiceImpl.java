@@ -25,7 +25,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		// TODO Auto-generated method stub
 		logger.info("【Oauth2从数据库中查询｛｝用户的信息】", username);
 		UserInfo userInfo = userInfoMapper.findByUsername(username);
 		List<SimpleGrantedAuthority> authorities = new ArrayList<>();
